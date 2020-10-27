@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function startWhoa() {
     setTurns(0)
+    for (let card of cards) {
+      card.classList.remove("flipped");
+    }
     let positions = [];
     for (let i = 1; i <= cardNum / 2; i++) {
       positions.push(i.toString());
